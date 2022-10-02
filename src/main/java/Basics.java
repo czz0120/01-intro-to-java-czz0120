@@ -38,12 +38,14 @@ public class Basics {
          *
          *    (Relevant reading: 1.1.3. Printing things)
          */
+        /*int[] arr = {5, 3, 1};
+        *System.out.println(oddSum(arr));*/
         System.out.println(7 + 5);
 
         /* TODO (Task 1): Write a line of code below that prints the string
          *                Hello World!
          */
-
+        System.out.println("Hello World!");
 
 
         /* 4. In Python, we could declare variables using a simple assignment
@@ -62,13 +64,14 @@ public class Basics {
          * TODO (Task 2): Create a variable named my_variable and assign it the
          *                value 100.
          */
-
+        int my_variable = 100;
 
 
         /* Do not remove the line below: if you did task 2 correctly, then
          * you should see the message "my_variable's value is 100" if you run
          * this file!
          */
+
         System.out.println("my_variable's value is " + my_variable);
 
         /* 5. In Python, we could write a loop that iterates using:
@@ -87,19 +90,18 @@ public class Basics {
          *    (Relevant reading: 1.8.2. for Loops)
          */
 
-        /*
-         * TODO (Task 3): Create a for-loop that loops from 10 to 0, printing
-         *                the following at each iteration:
-         *                Current count: #
-         *
-         * e.g. the end result should look like:
-         * Current count: 10
-         * Current count: 9
-         *     ...
-         * Current count: 1
-         * Current count: 0
-         */
-
+        // * TODO (Task 3): Create a for-loop that loops from 10 to 0, printing
+        // *                the following at each iteration:
+        // *                Current count: #
+        // *
+        // * e.g. the end result should look like:
+        // * Current count: 10
+        // * Current count: 9
+        // *     ...
+        // * Current count: 1
+        // * Current count: 0
+        for (int i = 10; i >= 0; i--)
+            System.out.println("Current count: " + i);
 
     }
 
@@ -143,7 +145,10 @@ public class Basics {
         StringBuilder ret = new StringBuilder();
 
         // Fill in the rest of the body here
-
+        String[] s = to_split.split("\\s", 7);
+        for (String w : s){
+            ret.append(w.charAt(0));
+        }
         return ret.toString();
     }
 
@@ -170,6 +175,9 @@ public class Basics {
          *                You can index into arrays as we do in Python
          *                (e.g. arr[i] gives you the item at index i).
          */
+        for (int i = 1; i < arr.length; i += 2){
+            current_sum += arr[i];
+        }
 
         return current_sum;
     }
